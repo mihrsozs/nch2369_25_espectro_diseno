@@ -23,17 +23,20 @@ A partir de estos parámetros, el script calcula:
 - **Espectro de referencia**
 - **Espectro de diseño reducido por el factor R**
 - **Espectro de diseño vertical**, incluyendo la estimación del **coeficiente sísmico vertical** según lo indicado en la NCh2369:2025.
+- **Verifica corte minimo y corte maxímo"
 
 Como resultado, el notebook genera:
 
 - **Un único gráfico del espectro de diseño**, que contiene simultáneamente:
   - Espectro de referencia  
-  - Espectro reducido por R  
+  - Espectro reducido por R para dirección x
+  - Espectro reducido por R para dirección y
   - Espectro vertical  
 
 - **Archivos `.txt` con los espectros calculados**, incluyendo:
   - Espectro de referencia  
-  - Espectro reducido (con R)  
+  - Espectro reducido (con R) para dirección x
+  - Espectro reducido (con R) para dirección y 
   - Espectro vertical  
 
 Estos archivos se generan en un formato compatible con software de análisis estructural como **SAP2000** o **ETABS**, permitiendo su incorporación directa como **funciones para análisis modal espectral**.
@@ -58,3 +61,5 @@ Puedes ejecutar el notebook directamente en Colab:
 - numpy
 - matplotlib
 - pandas
+- os
+- csv
